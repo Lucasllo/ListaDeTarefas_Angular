@@ -1,0 +1,18 @@
+<div>
+  <input #descricaoTarefa type="text" placeholder="Descrição da Tarefa">
+  <button (click)="adicionarTarefa(descricaoTarefa.value)">Adicionar Tarefa</button>
+</div>
+
+<p *ngFor="let tarefa of tarefas; let i = index">
+  <ng-container *ngIf="tarefa.feito">
+    <input type="checkbox" [checked]="tarefa.feito" id="">
+    {{tarefa.tarefa}}
+    <button (click)="excluirTarefa(i)">Excluir</button>
+  </ng-container>
+</p>
+
+<div [ngSwitch]="tarefas.length">
+  <p *ngSwitchCase="0">Nenhuma Tarefa</p>
+  <p *ngSwitchCase="1">Uma Tarefa</p>
+  <p *ngSwitchDefault="tarefas.length">{{tarefas.length}} Tarefas</p>
+</div>
