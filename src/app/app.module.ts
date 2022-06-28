@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { DiretivaIFComponent } from './diretiva-if/diretiva-if.component';
 import { DiretivaFORComponent } from './diretiva-for/diretiva-for.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { DiretivaFORComponent } from './diretiva-for/diretiva-for.component';
     DiretivaFORComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

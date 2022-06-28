@@ -8,6 +8,8 @@ import { tarefa } from './tarefa.interface';
 })
 export class DiretivaFORComponent {
 
+  novaTarefa:string = '';
+
   tarefas: tarefa[] = [
     {
       tarefa:"Arrumar a cama",
@@ -23,9 +25,9 @@ export class DiretivaFORComponent {
     }
   ]
 
-  adicionarTarefa(descricao:string){
+  adicionarTarefa(){
     this.tarefas.push({
-      tarefa: descricao,
+      tarefa: this.novaTarefa,
       feito: false
     })
   }
